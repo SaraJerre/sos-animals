@@ -16,7 +16,7 @@ function setup() {
   add_image_size( 'post-featured-image', 760, 9999 ); // width and height
   // add support for featured images 
   add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( 150, 150, false ); // default Featured Image dimensions (cropped/not cropped = true/false)
+  set_post_thumbnail_size( 300, 300, true ); // default Featured Image dimensions (cropped/not cropped = true/false)
 
   // register header menu
   register_nav_menu('header-menu', __( 'Header Menu', 'sos-animals' ) );
@@ -76,7 +76,7 @@ add_action( 'after_setup_theme', 'sos_animals_custom_logo_setup' );
  * @return int (Maybe) modified excerpt length.
  */
 function wpdocs_custom_excerpt_length( $length ) {
-    return 20;
+    return 10;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
