@@ -1,8 +1,8 @@
 <div class="sidebar">
 	<ul class="list-unstyled">
 		<?php 
-			if ( is_active_sidebar('news-sidebar') ) {
-				dynamic_sidebar('news-sidebar');
+			if ( is_active_sidebar('sidebar') ) {
+				dynamic_sidebar('sidebar');
 			}
 		?>
 	</ul><!-- /.list-unstyled -->

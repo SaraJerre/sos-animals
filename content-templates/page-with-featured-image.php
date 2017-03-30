@@ -1,4 +1,5 @@
-<article class="page">
+<article class="page with-featured-image">
+	<div class="featured-image" style="background-image: url(<?php the_post_thumbnail_url('page-featured-image'); ?>)"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 offset-md-1">
@@ -16,6 +17,5 @@
 				</main>
 			</div><!-- /.col-md-10 offset-md-1 -->
 		</div><!-- /.row -->
-		<hr>
 	</div><!-- /.container -->
 </article>

@@ -5,7 +5,7 @@ get_header();
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 offset-md-2">
 
 <?php
 // the loop starts here
@@ -15,10 +15,15 @@ get_header();
  		<header>
  			<h1 class="the-title"><?php the_title(); ?></h1>
  		</header>
- 		<main class="the-content">
- 			<?php the_content(); ?>
+ 		<?php if ( has_post_thumbnail() ) {
+			    the_post_thumbnail();
+			  } 
+		?>
+ 		<main class="the-excerpt">
+ 			<?php the_excerpt(); ?>
  		</main>
  	</article>
+ 	<hr>
 <?php
 // the loop ends here
 endwhile;
@@ -27,9 +32,8 @@ else :
 endif;
 ?>
 	
-	</div> <!-- /col-md-8 -->
+	</div> <!-- /col-md-8 .offset-md-2-->
   </div><!-- /row -->
-  <hr>
 </div><!-- /container -->
 
 <?php

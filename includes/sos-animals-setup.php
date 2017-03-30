@@ -1,4 +1,7 @@
 <?php
+// Register Custom Navigation Walker
+require_once('/wp-bootstrap-navwalker.php');
+
 function setup() {
 
   // show admin bar only if the logged in user is allowed to edit pages
@@ -8,11 +11,12 @@ function setup() {
     show_admin_bar(false);
   }
 
-  // add which sizes the images need to have in our theme
-  add_image_size( 'post-featured-image', 760, 9999 ); // width and height
+  // add which sizes the images need to have in the theme
+  add_image_size( 'page-featured-image', 2580, 450, array('center', 'center') );
+  add_image_size( 'post-featured-image', 760, 9999, false ); // width, height
   // add support for featured images 
   add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( 300, 300, true ); // default Featured Image dimensions (cropped/not cropped = true/false)
+  set_post_thumbnail_size( 200, 200, true );
 
   // register header menu
   register_nav_menu('header-menu', __( 'Header Menu', 'sos-animals' ) );
@@ -39,8 +43,8 @@ function sos_animals_widgets_init() {
 	 ) );
     // register news sidebar widget
     register_sidebar(array(
-      'name'          => 'News sidebar',
-      'id'            => 'news-sidebar',
+      'name'          => 'Sidebar',
+      'id'            => 'sidebar',
       'before_widget' => 'li class="sidebar-widget"',
       'after_widget'  => '</li>',
       'before_title'  => '<h2>',
@@ -64,6 +68,12 @@ function sos_animals_custom_logo_setup() {
     add_theme_support( 'custom-logo', $defaults );
 }
 add_action( 'after_setup_theme', 'sos_animals_custom_logo_setup' );
+
+// Add languages
+function sos_animals_load_theme_textdomain() {
+  load_theme_textdomain( 'sos-animals', get_template_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'sos_animals_load_theme_textdomain' );
 
 /* Combining Enqueue Functions (combine all enqueued scripts and styles into a single function, and then call them)*/
 function add_theme_scripts() {
