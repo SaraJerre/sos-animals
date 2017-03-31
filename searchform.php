@@ -1,20 +1,16 @@
 <?php
 /**
- * Template for displaying search forms in Twenty Seventeen
+ * Search Form Template
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
  */
 ?>
 
-<?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
-
-<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<label for="<?php echo $unique_id; ?>">
-		<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'twentyseventeen' ); ?></span>
-	</label>
-	<input type="search" id="<?php echo $unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'twentyseventeen' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-	<button type="submit" class="search-submit"><?php echo twentyseventeen_get_svg( array( 'icon' => 'search' ) ); ?><span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'twentyseventeen' ); ?></span></button>
+<form method="get" class="form-search ml-auto" action="<?php echo home_url( '/' ); ?>">
+	<div class="input-group">
+		<input type="text" class="form-control search-query" name="s" placeholder="<?php esc_attr_e('search here', 'sos-animals'); ?>" />
+		<span class="input-group-btn">
+			<button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="<?php esc_attr_e('Search', 'sos-animals'); ?>"><?php _e('Search', 'sos-animals'); ?></button>
+		</span>
+	</div>
 </form>
+

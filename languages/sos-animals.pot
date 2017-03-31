@@ -8,7 +8,7 @@ msgstr ""
 "Animals-Wordpress "
 "Theme\n"
 "POT-Creation-Date: "
-"2017-03-29 20:51+0200\n"
+"2017-03-30 17:55+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -51,7 +51,7 @@ msgstr ""
 "X-Poedit-"
 "SearchPath-0: .\n"
 
-#: includes/sos-animals-filters.php:23
+#: includes/sos-animals-filters.php:17
 msgid "Read More"
 msgstr ""
 
@@ -71,11 +71,17 @@ msgid ""
 "that page for you."
 msgstr ""
 
-#: search.php:31
+#: search.php:15
+msgid "Search results"
+msgstr ""
+
+#: searchform.php:10
 msgid ""
-"Sorry, no results "
-"matched your search "
-"criteria."
+"search here &hellip;"
+msgstr ""
+
+#: searchform.php:12
+msgid "Search"
 msgstr ""
 
 #: single.php:14

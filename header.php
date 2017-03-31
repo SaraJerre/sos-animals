@@ -35,10 +35,11 @@
           ?>
 
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <form class="form-inline mt-2 mt-md-0 ml-auto">
+            <!-- <form class="form-inline mt-2 mt-md-0 ml-auto">
               <input class="form-control mr-sm-2" type="text" placeholder="Search">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form> -->
+            <?php get_search_form(); ?>
           </div>
         </div><!-- /.container -->
       </nav>

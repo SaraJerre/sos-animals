@@ -95,3 +95,17 @@ function add_theme_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
+function get_custom_excerpt($num_words) {
+  $post = get_post();
+  $excerpt = $post->post_excerpt;
+  if (empty($excerpt)) {
+    $excerpt = strip_tags($post->post_content);
+  }
+
+  $words = explode(" ", $excerpt);
+  $words = array_slice($words, 0, $num_words);
+  $excerpt = implode(" ", $words);
+
+  return $excerpt;
+}

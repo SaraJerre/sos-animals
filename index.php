@@ -20,7 +20,10 @@ get_header();
 			  } 
 		?>
  		<main class="the-excerpt">
- 			<?php the_excerpt(); ?>
+ 			<?php echo get_custom_excerpt(6); ?>
+ 			<div class="read-more-wrapper">
+ 				<a href="<?php the_permalink(); ?>" class="btn btn-success">Read more</a>
+ 			</div>
  		</main>
  	</article>
  	<hr>

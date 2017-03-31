@@ -9,17 +9,33 @@ get_header();
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8 offset-md-2">
+    <div class="col-md-10 offset-md-1">
+    	<?php if ( have_posts() ) : ?>
 	 	<article class="search-results">
-	 		<header>
-	 			<h1><?php _e('Search results', 'sos-animals'); ?></h1>
-	 		</header>
-	 		<main class="search-content">
-	 			<?php get_search_form(); ?>
-	 		</main>
+ 			<!-- prints 'Search results' followed by the user's search input as title -->
+ 			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+ 	
+ 			<?php /* Start the Loop */ ?>
+        	<?php while ( have_posts() ) : the_post(); ?>
+ 			<header>
+ 				<h1 class="the-title"><?php the_title(); ?></h1>
+ 			</header>
+				<?php if ( has_post_thumbnail() ) {
+		    	the_post_thumbnail();
+		  	} 
+			?>
+				<main class="the-excerpt">
+					<?php the_excerpt(); ?>
+ 				</main>
+ 			<?php
+ 			// the loop ends here
+			endwhile;
+			else :
+    			_e( 'Sorry, no search results matched your criteria.', 'sos-animals' );
+			endif;
+			?>
 	 	</article>
- 		<hr>
-	</div> <!-- /col-md-8 .offset-md-2-->
+	</div> <!-- /col-md-10 .offset-md-1-->
   </div><!-- /row -->
 </div><!-- /container -->
 

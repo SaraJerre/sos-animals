@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SOS Animals-Wordpress Theme\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-03-29 20:54+0200\n"
+"POT-Creation-Date: 2017-03-30 17:59+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Sara <translations@example.com>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "X-Generator: Poedit 2.0\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/sos-animals-filters.php:23
+#: includes/sos-animals-filters.php:17
 msgid "Read More"
 msgstr ""
 
@@ -40,11 +40,17 @@ msgstr ""
 msgid "Sorry, could not find that page for you."
 msgstr ""
 
-#: search.php:31
-msgid "Sorry, no search results matched your criteria."
-msgstr ""
-"Ledsen, men inget matchade din sökning. Var vänlig försök igen med "
-"andra sökord."
+#: search.php:15
+msgid "Search results"
+msgstr "Sökresultat"
+
+#: searchform.php:10
+msgid "search here"
+msgstr "sök här"
+
+#: searchform.php:12
+msgid "Search"
+msgstr "Sök"
 
 #: single.php:14
 msgid "Sorry, could not find that post for you."
