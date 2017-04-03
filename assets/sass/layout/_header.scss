@@ -1,6 +1,6 @@
-@import '/helpers/_mixins.scss';
+@import '../helpers/_mixins.scss';
 
-/* to prevent admin bar to stay on top of sticky header */
+/* prevent admin bar to stay on top of sticky header */
 .navbar {
   position: fixed;
   top: 0;

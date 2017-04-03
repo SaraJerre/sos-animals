@@ -18,7 +18,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
-          <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?> </a>
+          <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory');?>/images/sos-animals-logo.png" alt="sos-animals-logo" height="40" width="120"></a>
           <!-- menu that works with Bootstrap with dropdown-support -->
           <?php
             wp_nav_menu( array(

@@ -78,22 +78,6 @@ function sos_animals_widgets_init() {
 }
 add_action( 'widgets_init', 'sos_animals_widgets_init' );
 
-/**
- * Register our custom logo.
- *
- */
-function sos_animals_custom_logo_setup() {
-  $defaults = array(
-        'height'      => 38,
-        'width'       => 61,
-        'flex-height' => true,
-        'flex-width'  => true,
-        'header-text' => array( 'site-title', 'site-description' ),
-    );
-    add_theme_support( 'custom-logo', $defaults );
-}
-add_action( 'after_setup_theme', 'sos_animals_custom_logo_setup' );
-
 // Add languages
 function sos_animals_load_theme_textdomain() {
   load_theme_textdomain( 'sos-animals', get_template_directory() . '/languages' );

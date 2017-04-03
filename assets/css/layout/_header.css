@@ -1,0 +1,11 @@
+/* used to quickly tweak any fixed-position item to compensate for admin bar */
+/* prevent admin bar to stay on top of sticky header */
+.navbar {
+  position: fixed;
+  top: 0;
+  /* include mixin */ }
+  .admin-bar .navbar {
+    top: 46px; }
+    @media screen and (min-width: 783px) {
+      .admin-bar .navbar {
+        top: 32px; } }
