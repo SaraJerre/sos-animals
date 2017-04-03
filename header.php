@@ -18,7 +18,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
-          <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+          <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?> </a>
           <!-- menu that works with Bootstrap with dropdown-support -->
           <?php
             wp_nav_menu( array(
@@ -43,6 +43,4 @@
           </div>
         </div><!-- /.container -->
       </nav>
-    </div><!-- /.navbar-wrapper -->
-
- 
+    </div><!-- /.navbar-wrapper --> 

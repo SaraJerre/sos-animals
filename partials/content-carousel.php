@@ -22,7 +22,10 @@
           <div class="container"> 
             <div class="carousel-caption d-none d-md-block">
               <h1><?php the_title(); ?></h1>
-              <p><?php the_excerpt(); ?></p>
+              <?php echo get_custom_excerpt(10); ?>
+              <div class="read-more-wrapper">
+                <a href="<?php the_permalink(); ?>" class="btn btn-success"><?php _e('Read more', 'sos-animals') ?></a>
+              </div>
             </div>
           </div><!-- /.container -->
         </div><!-- /.item-active -->
@@ -47,7 +50,10 @@
         <div class="container">
           <div class="carousel-caption d-none d-md-block">
             <h1><?php the_title(); ?></h1>
-            <p><?php the_excerpt(); ?></p>
+            <?php echo get_custom_excerpt(10); ?>
+              <div class="read-more-wrapper">
+                <a href="<?php the_permalink(); ?>" class="btn btn-success"><?php _e('Read more', 'sos-animals') ?></a>
+              </div>
           </div>
         </div><!-- /.container -->
       </div><!-- /.carousel-item -->

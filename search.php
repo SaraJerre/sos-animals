@@ -1,8 +1,4 @@
 <?php
-/*
-Template Name: Search Page
-*/
-
 // get the header
 get_header();
 ?>
@@ -21,11 +17,14 @@ get_header();
  				<h1 class="the-title"><?php the_title(); ?></h1>
  			</header>
 				<?php if ( has_post_thumbnail() ) {
-		    	the_post_thumbnail();
-		  	} 
+			    	the_post_thumbnail();
+			  	} 
 			?>
 				<main class="the-excerpt">
-					<?php the_excerpt(); ?>
+					<?php the_excerpt(50); ?>
+					 <div class="read-more-wrapper">
+                      <a href="<?php the_permalink(); ?>" class="btn btn-success"><?php _e('Read more', 'sos-animals') ?></a>
+                    </div>
  				</main>
  			<?php
  			// the loop ends here

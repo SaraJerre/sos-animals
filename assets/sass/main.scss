@@ -1,0 +1,20 @@
+
+/* HELPERS - Variable file along with mixins.
+========================================================================== */
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+
+/* LAYOUT - For the main sections of the site's layout.
+========================================================================== */
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+
+/* COMPONENTS - Files for smaller site components.
+========================================================================== */
+@import 'components/_carousel.scss';
+
+/* PAGES - Page- and category-specific styles.
+========================================================================== */
+@import 'pages/_adoptera-hund.scss';
+
+

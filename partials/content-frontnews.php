@@ -19,10 +19,15 @@ $news_posts = new WP_Query('cat=5&posts_per_page=3');
 				<?php 
 				  // check if the post has a Featured Image assigned to it.
 				  if ( has_post_thumbnail() ) {
-				    the_post_thumbnail('medium');
+				    the_post_thumbnail();
 				  } 
 				?>
-				<p><?php the_excerpt(); ?></p>
+				<div class="custom-excerpt">
+					<?php echo get_custom_excerpt(10); ?>
+		 			<div class="read-more-wrapper">
+		 				<a href="<?php the_permalink(); ?>" class="btn btn-success"><?php _e('Read more', 'sos-animals') ?></a>
+		 			</div>
+		 		</div>
 		<?php 
 		?>
 			</div><!-- /.col-md-4 -->

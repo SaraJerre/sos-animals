@@ -16,7 +16,7 @@ function setup() {
   add_image_size( 'post-featured-image', 760, 9999, false ); // width, height
   // add support for featured images 
   add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( 200, 200, true );
+  set_post_thumbnail_size( 300, 300, true );
 
   // register header menu
   register_nav_menu('header-menu', __( 'Header Menu', 'sos-animals' ) );
@@ -32,19 +32,44 @@ add_action('after_setup_theme', 'setup');
  *
  */
 function sos_animals_widgets_init() {
-    // register footer area widget
+    /* Register 3 footer area widgets */
+    // First footer widget area, located in the footer. Empty by default.
     register_sidebar( array(
-    	'name'          => 'Footer area',
-    	'id'            => 'footer-area',
-    	'before_widget' => '<li class="list-inline-item">',
-    	'after_widget'  => '</li>',
-    	'before_title'  => '<h2>',
-    	'after_title'   => '</h2>',
-	 ) );
-    // register news sidebar widget
+        'name'          => __( 'First Footer Widget Area', 'sos-animals' ),
+        'id'            => 'first-footer-widget-area',
+        'description'   => __( 'The first footer widget area', 'sos-animals' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+ 
+    // Second Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name'          => __( 'Second Footer Widget Area', 'sos-animals' ),
+        'id'            => 'second-footer-widget-area',
+        'description'   => __( 'The second footer widget area', 'sos-animals' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+ 
+    // Third Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name'          => __( 'Third Footer Widget Area', 'sos-animals' ),
+        'id'            => 'third-footer-widget-area',
+        'description'   => __( 'The third footer widget area', 'sos-animals' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+    // Register 1 sidebar widget
     register_sidebar(array(
-      'name'          => 'Sidebar',
+      'name'          => __( 'Sidebar', 'sos-animals' ),
       'id'            => 'sidebar',
+      'description'   => __( 'The sidebar widget area', 'sos-animals' ),
       'before_widget' => 'li class="sidebar-widget"',
       'after_widget'  => '</li>',
       'before_title'  => '<h2>',
@@ -59,8 +84,8 @@ add_action( 'widgets_init', 'sos_animals_widgets_init' );
  */
 function sos_animals_custom_logo_setup() {
   $defaults = array(
-        'height'      => 50,
-        'width'       => 100,
+        'height'      => 38,
+        'width'       => 61,
         'flex-height' => true,
         'flex-width'  => true,
         'header-text' => array( 'site-title', 'site-description' ),
@@ -79,7 +104,7 @@ add_action( 'after_setup_theme', 'sos_animals_load_theme_textdomain' );
 function add_theme_scripts() {
   wp_enqueue_style( 'bootstrap4', "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", '4.0.0-alpha.6' );
 
-  wp_enqueue_style( 'styles', get_template_directory_uri() . '/css/main.css', array('bootstrap4'), '2017031701');
+  wp_enqueue_style( 'styles', get_template_directory_uri() . '/assets/css/main.css', array('bootstrap4'), '2017031701');
 
   wp_deregister_script( 'jquery' ); /* first, deregister old jquery that's not compatible with our bootstrap version */
   wp_enqueue_script( 'jquery', "https://code.jquery.com/jquery-3.1.1.slim.min.js", array(), '3.1.1', true);
@@ -88,7 +113,7 @@ function add_theme_scripts() {
 
   wp_enqueue_script( 'bootstrap4', "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js", array('jquery', 'tether'), '4.0.0-alpha.6', true);
  
-  wp_enqueue_script('carousel-jquery', get_template_directory_uri() - '/js/carousel-ready.js', array('bootstrap4', 'jquery'), '2017032601' );
+  wp_enqueue_script('carousel-jquery', get_template_directory_uri() - '/assets/js/carousel-ready.js', array('bootstrap4', 'jquery'), '2017032601' );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
       wp_enqueue_script( 'comment-reply' );
@@ -96,6 +121,7 @@ function add_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
+// add custom excerpt length to any post
 function get_custom_excerpt($num_words) {
   $post = get_post();
   $excerpt = $post->post_excerpt;
