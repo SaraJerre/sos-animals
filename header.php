@@ -33,10 +33,5 @@
               'walker'          => new bootstrap_4_walker_nav_menu()
             ) );
           ?>
-<!-- 
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <?php get_search_form(); ?>
-          </div> -->
-       
       </nav>
     </div><!-- /.navbar-wrapper --> 
