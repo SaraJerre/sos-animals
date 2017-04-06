@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SOS Animals-Wordpress Theme\n"
-"POT-Creation-Date: 2017-04-01 16:57+0200\n"
+"POT-Creation-Date: 2017-04-07 01:04+0200\n"
 "PO-Revision-Date: \n"
 "Language-Team: Sara <translations@example.com>\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
@@ -37,35 +37,35 @@ msgstr ""
 
 #: includes/sos-animals-setup.php:38
 msgid "First Footer Widget Area"
-msgstr "Sidfot widget 1"
+msgstr ""
 
 #: includes/sos-animals-setup.php:40
 msgid "The first footer widget area"
-msgstr "Första widget-området för sidfoten"
+msgstr ""
 
 #: includes/sos-animals-setup.php:49
 msgid "Second Footer Widget Area"
-msgstr "Sidfot widget 2"
+msgstr ""
 
 #: includes/sos-animals-setup.php:51
 msgid "The second footer widget area"
-msgstr "Andra widget-området för sidfoten"
+msgstr ""
 
 #: includes/sos-animals-setup.php:60
 msgid "Third Footer Widget Area"
-msgstr "Tredje widget-området för sidfoten"
+msgstr ""
 
 #: includes/sos-animals-setup.php:62
 msgid "The third footer widget area"
-msgstr ""
+msgstr "Tredje widget-området för sidfoten"
 
 #: includes/sos-animals-setup.php:70
 msgid "Sidebar"
-msgstr "Sidofält"
+msgstr ""
 
 #: includes/sos-animals-setup.php:72
 msgid "The sidebar widget area"
-msgstr "Widget-område i sidofält"
+msgstr ""
 
 #: page.php:14
 msgid "Sorry, could not find that page for you."
@@ -74,7 +74,7 @@ msgstr ""
 #: search.php:16
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Sökresultat för"
 
 #: search.php:37
 msgid "Sorry, no search results matched your criteria."
