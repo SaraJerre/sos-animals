@@ -4,11 +4,9 @@
 	</div>
 	<header>
 		<h1 class="the-title"><?php the_title(); ?></h1>
-		<?php if ( !in_category('Home Slider') ) { ?>
 			<h4 class="the-meta">
 				<span class="the-date"><?php the_date(); ?></span>
 			</h4>
-		<?php } ?>
 	</header>
 	<main class="the-content">
 		<?php the_content(); ?>

@@ -2,7 +2,39 @@
 
 footer {
 	
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	p {
+	  margin-bottom: .25rem;
+	}
+
 	&.site-footer {
 		background: $sos-red;
+		/* even if footer has no content it should display some space */
+		min-height: 60px;
+		/* create some space above footer and below content */
+		margin-top: 50px;
+
+	}
+
+	.widget-title, .textwidget {
+		color: $snow-white;
+	}
+
+	.widget-title {
+		@extend %give-me-space;
+	}
+
+	.second .widget-title {
+		text-align: center;
+	}
+
+	img {
+		@extend %give-me-space;
+
+		&:nth-child(1) {
+			margin-right: 0.5em;
+		}
 	}
 }

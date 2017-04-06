@@ -1,0 +1,11 @@
+.btn-success {
+	margin-top: 1rem;
+	font-family: 'Indie Flower', 'Georgia', 'Times New Roman', serif;
+
+	&.carousel {
+		background: transparentize($snow-white, 0.3);
+		color: $sos-red; 
+		border: 3px solid $sos-red;
+		font-size: 2em;
+	}
+}

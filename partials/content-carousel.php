@@ -21,10 +21,8 @@
       ?>
       <div class="container carousel"> 
         <div class="carousel-caption d-none d-md-block">
-          <h1><?php the_title(); ?></h1>
-          <?php echo get_custom_excerpt(10); ?>
           <div class="read-more-wrapper">
-            <a href="<?php the_permalink(); ?>" class="btn btn-success"><?php _e('Read more', 'sos-animals') ?></a>
+            <a href="<?php the_permalink(); ?>" class="btn btn-success carousel"><?php the_title(); ?></a>
           </div>
         </div>
       </div><!-- /.container -->
@@ -49,10 +47,8 @@
     <?php the_post_thumbnail('large'); ?>
     <div class="container">
       <div class="carousel-caption d-none d-md-block">
-        <h1><?php the_title(); ?></h1>
-        <?php echo get_custom_excerpt(10); ?>
           <div class="read-more-wrapper">
-            <a href="<?php the_permalink(); ?>" class="btn btn-success"><?php _e('Read more', 'sos-animals') ?></a>
+            <a href="<?php the_permalink(); ?>" class="btn btn-success carousel"><?php the_title(); ?></a>
           </div>
       </div>
     </div><!-- /.container -->

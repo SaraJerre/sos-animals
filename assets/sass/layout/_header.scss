@@ -1,21 +1,29 @@
 @import '../helpers/_mixins.scss';
 
+/* 	create space under navbar, except on front page and hundar-category */
 body {
 	margin-top: 100px;
+
+	&.home, &.category-hundar {
+		margin-top: 0;
+	}
 }
 
 .navbar {
 	// OBS! I KNOW !IMPORTANT SHOULD NEVER BE USED BUT I HAD TO CUZ STUPID BOOTSTRAP HAD USED IT ON THE DEFAULT NAVBAR BACKGROUND COLOR!
 	background: $sos-red !important;
+
 	/* prevent admin bar to stay on top of sticky header */
 	position: fixed;
 	top: 0;
 	/* include mixin */
 	@include admin-sticky-fix;
 }
-
+/* main menu links */
 .navbar-inverse .navbar-nav {
-	.current-menu-item a.nav-link {
+	padding-right: 5rem;
+	.current-menu-item a.nav-link, .current-page-parent a.nav-link.dropdown-toggle {
+		color: $black;
 		text-decoration: underline;
 	}
 
@@ -23,7 +31,21 @@ body {
 		color: $snow-white;
 
 		&:hover {
-			color: $snow-white;
+			color: $black;
+		}
+	}
+}
+/* drop-down in main menu */
+ul.dropdown-menu {
+	background: $sos-red;
+	border: none;
+
+	> li > a {
+		color: $snow-white;
+		border: none; 
+
+		&:hover {
+			background: $sos-red;
 		}
 	}
 }

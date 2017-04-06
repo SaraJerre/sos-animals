@@ -1,0 +1,17 @@
+// TYPOGRAPHY 
+@import url('https://fonts.googleapis.com/css?family=Sanchez|Indie+Flower|Lato');
+@import 'helpers/_variables.scss';
+/* body, heading 4 widget-text font */
+p, h4, .textwidget {
+	font-family: 'Lato', 'Roboto', 'Droid', 'Open Sans', 'Arial', sans-serif;
+}
+
+/* link font */
+a.nav-link, .dropdown-menu > li > a {
+	font-family: 'Sanchez', 'Georgia', 'Times New Roman', serif;
+}
+
+h1, h2, h3 {
+	font-family: 'Indie Flower', 'Georgia', 'Times New Roman', serif;
+	color: $black;
+}

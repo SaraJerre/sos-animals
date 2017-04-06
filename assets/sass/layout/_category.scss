@@ -1,9 +1,29 @@
+/* add space between articles */
 article.category {
-	// add space between articles
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	
+	@extend %give-me-space;
+	/* add space to excerpt */
+	.the-excerpt, img {
+		@extend %give-me-space;
+	}
 
-	h1 {
+	.the-title {
 		font-size: 1.75rem;
+	}
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (max-width: 1200px) {
+	article.category {
+		.the-excerpt, .the-meta, .the-title {
+			display: inline;
+			float: left;
+			margin-right: 1.5em;
+		}
+
+		.the-title {
+			margin-top: 1rem;
+		}
 	}
 }

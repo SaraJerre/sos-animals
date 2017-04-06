@@ -5,15 +5,12 @@ body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
 
-.navbar {
-  margin-bottom: 0;
-}
-
 .jumbotron {
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-bottom: 0;
   background-color: #fff;
+  max-height: 20rem;
 }
 
 .jumbotron p:last-child {
@@ -32,7 +29,6 @@ body {
   min-height: 50rem; /* Can be removed; just added for demo purposes */
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #f7f7f7;
 }
 
 .card {
@@ -41,6 +37,11 @@ body {
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
+
+  h4 > a, a:hover {
+    text-decoration: none; 
+    color: $black;
+  }
 }
 
 .card > img {
@@ -51,11 +52,3 @@ body {
   font-size: 85%;
 }
 
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
-}

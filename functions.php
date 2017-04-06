@@ -5,8 +5,5 @@ require_once('includes/sos-animals-setup.php');
 // Add filters
 require_once('includes/sos-animals-filters.php');
 
-// Add actions
-require_once('includes/sos-animals-actions.php');
-
 // Add shortcodes
 require_once('includes/sos-animals-shortcodes.php');

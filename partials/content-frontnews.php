@@ -11,7 +11,7 @@ $news_posts = new WP_Query('cat=5&posts_per_page=3');
 			<?php
 			$news_posts->the_post();
 			?>
-				<h4><?php the_title(); ?></h4>
+				<h3><?php the_title(); ?></h3>
 				<?php 
 				  // check if the post has a Featured Image assigned to it.
 				  if ( has_post_thumbnail() ) {
