@@ -28,7 +28,6 @@ body {
 .album {
   min-height: 50rem; /* Can be removed; just added for demo purposes */
   padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .card {
@@ -50,6 +49,25 @@ body {
 
 .card-text {
   font-size: 85%;
-  font-family: 'Lato', 'Roboto', 'Droid', 'Open Sans', 'Arial', sans-serif;;
+  font-family: 'Lato', 'Roboto', 'Droid', 'Open Sans', 'Arial', sans-serif;
 }
 
+@media (max-width: 770px) {
+  .jumbotron  {
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+  }
+
+  body > section > div > p.lead.text-muted {
+    font-size: 1rem;
+  }
+
+  .btn.btn-success.dogs {
+    display: none;
+  }
+}

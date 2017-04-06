@@ -36,10 +36,15 @@
 		font-size: 1.2em;
 	}
 }
-
-#searchsubmit {
+/* search button + submit button contact form */
+#searchsubmit, .wpcf7-submit {
 	background: $dark-red;
 	border: 2px solid $dark-red;
 	color: $snow-white; 
 	font-family: 'Sanchez', 'Georgia', 'Times New Roman', serif;
+}
+
+.wpcf7-submit {
+	padding: 5px 20px 5px 20px;
+	border-radius: 4px;
 }

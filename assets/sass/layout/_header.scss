@@ -2,7 +2,7 @@
 
 /* 	create space under navbar, except on front page and hundar-category */
 body {
-	margin-top: 100px;
+	margin-top: 8em;
 
 	&.home, &.category-hundar {
 		margin-top: 0;

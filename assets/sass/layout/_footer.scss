@@ -37,3 +37,10 @@ footer {
 		}
 	}
 }
+
+@media (max-width: 770px) {
+  div.second  {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}

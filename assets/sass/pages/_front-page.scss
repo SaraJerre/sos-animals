@@ -1,6 +1,12 @@
-div.news-post {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+
+.home {
+	h1.the-title {
+		text-align: center;
+	}
+	div.news-post {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
 }
 
 /* add space under navbar when carousel isn't displayed */
