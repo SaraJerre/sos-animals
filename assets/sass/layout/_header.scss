@@ -1,9 +1,29 @@
 @import '../helpers/_mixins.scss';
 
-/* prevent admin bar to stay on top of sticky header */
+body {
+	margin-top: 100px;
+}
+
 .navbar {
-  position: fixed;
-  top: 0;
-  /* include mixin */
-  @include admin-sticky-fix;
+	// OBS! I KNOW !IMPORTANT SHOULD NEVER BE USED BUT I HAD TO CUZ STUPID BOOTSTRAP HAD USED IT ON THE DEFAULT NAVBAR BACKGROUND COLOR!
+	background: $sos-red !important;
+	/* prevent admin bar to stay on top of sticky header */
+	position: fixed;
+	top: 0;
+	/* include mixin */
+	@include admin-sticky-fix;
+}
+
+.navbar-inverse .navbar-nav {
+	.current-menu-item a.nav-link {
+		text-decoration: underline;
+	}
+
+	a.nav-link {
+		color: $snow-white;
+
+		&:hover {
+			color: $snow-white;
+		}
+	}
 }

@@ -3,7 +3,7 @@
 ?>
 <div class="container">
   <div class="row">
-   <div class="col-md-10 offset-md-1">
+   <div class="col-md-8">
 <?php	if ( have_posts() ) {
 		while (have_posts() ) {
 			the_post();
@@ -17,10 +17,16 @@
 	} else {
 		_e('Sorry, could not find that post for you.', 'sos-animals');
 	}
-?>
+?>	
+	</div>
+	<div class="col-md-4">
+		<!-- if the post belongs to the 'Nyheter' category, a custom sidebar will be included -->
+		<?php if ( in_category('Nyheter') ) : 
+	 		get_sidebar('news');
+	 	endif; ?>
 	</div>
   </div>
-</div>
+</div>	
 <?php
 	get_footer();
 ?>

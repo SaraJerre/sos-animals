@@ -1,20 +1,25 @@
 
-/* HELPERS - Variable file along with mixins.
-========================================================================== */
+// HELPERS - Variable file along with mixins.
+// ========================================================================== 
 @import 'helpers/_variables.scss';
 @import 'helpers/_mixins.scss';
 
-/* LAYOUT - For the main sections of the site's layout.
-========================================================================== */
+// WORDPRESS DEFAULT STYLES
+// ========================================================================== 
+@import '_wp-default-styles.scss';
+
+// LAYOUT - For the main sections of the site's layout.
+// ========================================================================== 
 @import 'layout/_header.scss';
+@import 'layout/_category.scss';
+@import 'layout/_sidebar.scss';
 @import 'layout/_footer.scss';
 
-/* COMPONENTS - Files for smaller site components.
-========================================================================== */
+// COMPONENTS - Files for smaller site components.
+// ========================================================================== 
 @import 'components/_carousel.scss';
 
-/* PAGES - Page- and category-specific styles.
-========================================================================== */
+// PAGES - Page- and category-specific styles.
+// ========================================================================== 
 @import 'pages/_hundar.scss';
-
 

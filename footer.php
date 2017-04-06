@@ -1,8 +1,8 @@
  <!-- FOOTER -->
       <footer class="site-footer">
-        <div class="container">
+        <div class="container footer">
           <div class="row">
-            <ul class="list-inline col-md-12">
+          
               <!-- The footer widget area is triggered if any of the areas
                have widgets. If none of the sidebars have widgets, nothing should be output -->
               <?php
@@ -52,7 +52,7 @@
                         </div><!-- .first .widget-area -->
             <!-- end of all sidebar checks. -->
             <?php endif ;?>
-            </ul><!-- /.list-inline -->
+            
           </div> <!-- /row -->
         </div><!-- /container -->
       </footer> 

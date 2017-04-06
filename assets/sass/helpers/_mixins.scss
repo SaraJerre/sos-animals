@@ -1,4 +1,4 @@
-/* used to quickly tweak any fixed-position item to compensate for admin bar */
+// used to quickly tweak any fixed-position item to compensate for admin bar 
 @mixin admin-sticky-fix( $offset: 0 ) {
   $narrow-offset: 46px;
   $wide-offset: 32px;

@@ -13,13 +13,22 @@ function setup() {
 
   // add which sizes the images need to have in the theme
   add_image_size( 'page-featured-image', 2580, 450, array('center', 'center') );
-  add_image_size( 'post-featured-image', 760, 9999, false ); // width, height
+  add_image_size( 'post-featured-image', 9999, 400, false ); // width, height
   // add support for featured images 
   add_theme_support( 'post-thumbnails' );
   set_post_thumbnail_size( 300, 300, true );
 
   // register header menu
   register_nav_menu('header-menu', __( 'Header Menu', 'sos-animals' ) );
+
+  // register support for custom logo
+  add_theme_support( 'custom-logo', array(
+  'height'      => 100,
+  'width'       => 400,
+  'flex-height' => false,
+  'flex-width'  => false,
+  'header-text' => array( 'site-title', 'site-description' ),
+  ) );
 
   // register which post formats that are supported in the theme
   add_theme_support('post-formats', array('image') );
@@ -65,18 +74,42 @@ function sos_animals_widgets_init() {
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
-    // Register 1 sidebar widget
+
+    // Register primary sidebar widget
     register_sidebar(array(
       'name'          => __( 'Sidebar', 'sos-animals' ),
-      'id'            => 'sidebar',
+      'id'            => 'primary-sidebar',
       'description'   => __( 'The sidebar widget area', 'sos-animals' ),
-      'before_widget' => 'li class="sidebar-widget"',
+      'before_widget' => '<li class="sidebar-widget">',
+      'after_widget'  => '</li>',
+      'before_title'  => '<h2>',
+      'after_title'   => '</h2>'
+    ) );
+
+    // Register news sidebar widget
+    register_sidebar(array(
+      'name'          => __( 'News Sidebar', 'sos-animals' ),
+      'id'            => 'news-sidebar',
+      'description'   => __( 'The news sidebar widget area', 'sos-animals' ),
+      'before_widget' => '<li class="sidebar-widget">',
       'after_widget'  => '</li>',
       'before_title'  => '<h2>',
       'after_title'   => '</h2>'
     ) );
 }
 add_action( 'widgets_init', 'sos_animals_widgets_init' );
+
+// Setting up theme logo with custom size
+function sos_animals_theme_logo_setup() {
+  
+  add_theme_support( 'custom-logo', array(
+    'height'      => 60,
+    'width'       => 180,
+    'flex-width' => true,
+  ) );
+
+}
+add_action( 'after_setup_theme', 'sos_animals_theme_logo_setup' );
 
 // Add languages
 function sos_animals_load_theme_textdomain() {
