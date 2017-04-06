@@ -1,0 +1,11 @@
+div.news-post {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+/* add space under navbar when carousel isn't displayed */
+@media (max-width: 720px) {
+  	body.home {
+	    margin-top: 100px;
+	}  
+} 

@@ -1,5 +1,5 @@
 <!-- a news category sidebar with the 10 latest news will be displayed by default if 'news-sidebar' is not active -->
-<?php if ( !is_active_sidebar('news-sidebar') ) :
+<?php if ( !is_active_sidebar('sidebar-news') ) :
 	// The Query
 	$news_archive_posts = new WP_Query('cat=5&posts_per_page=10');
 ?>

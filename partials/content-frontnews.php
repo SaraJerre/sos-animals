@@ -21,7 +21,7 @@ $news_posts = new WP_Query('cat=5&posts_per_page=3');
 				<div class="custom-excerpt">
 					<?php echo get_custom_excerpt(10); ?>
 		 			<div class="read-more-wrapper">
-		 				<a href="<?php the_permalink(); ?>" class="btn btn-success"><?php _e('Read more', 'sos-animals') ?></a>
+		 				<a href="<?php the_permalink(); ?>" class="btn btn-success front-news"><?php _e('Read more', 'sos-animals') ?></a>
 		 			</div>
 		 		</div>
 		 	</div><!-- /.col-md-4 -->

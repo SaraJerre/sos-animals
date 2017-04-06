@@ -78,7 +78,7 @@ function sos_animals_widgets_init() {
     // Register primary sidebar widget
     register_sidebar(array(
       'name'          => __( 'Sidebar', 'sos-animals' ),
-      'id'            => 'primary-sidebar',
+      'id'            => 'sidebar-primary',
       'description'   => __( 'The sidebar widget area', 'sos-animals' ),
       'before_widget' => '<li class="sidebar-widget">',
       'after_widget'  => '</li>',
@@ -89,7 +89,7 @@ function sos_animals_widgets_init() {
     // Register news sidebar widget
     register_sidebar(array(
       'name'          => __( 'News Sidebar', 'sos-animals' ),
-      'id'            => 'news-sidebar',
+      'id'            => 'sidebar-news',
       'description'   => __( 'The news sidebar widget area', 'sos-animals' ),
       'before_widget' => '<li class="sidebar-widget">',
       'after_widget'  => '</li>',

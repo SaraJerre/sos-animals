@@ -31,7 +31,7 @@ get_header();
 							<div class="the-excerpt">
 								<?php echo get_custom_excerpt(40); ?>
 								<div class="read-more-wrapper">
-									<a href="<?php the_permalink(); ?>" class="btn btn-success"><?php _e('Read more', 'sos-animals') ?></a>
+									<a href="<?php the_permalink(); ?>" class="btn btn-success cat"><?php _e('Read more', 'sos-animals') ?></a>
 								</div>
 							</div>
 						</article>

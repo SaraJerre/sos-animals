@@ -1,16 +1,20 @@
 // TYPOGRAPHY 
 @import url('https://fonts.googleapis.com/css?family=Sanchez|Indie+Flower|Lato');
 @import 'helpers/_variables.scss';
-/* body, heading 4 widget-text font */
-p, h4, .textwidget {
+/* body, heading 4, widget-text, label p (contact form) font */
+p, h4, .textwidget, label > p, input {
 	font-family: 'Lato', 'Roboto', 'Droid', 'Open Sans', 'Arial', sans-serif;
+}
+
+p {
+	line-height: 175%;
 }
 
 /* link font */
 a.nav-link, .dropdown-menu > li > a {
 	font-family: 'Sanchez', 'Georgia', 'Times New Roman', serif;
 }
-
+/* heading 1,2,3 font */
 h1, h2, h3 {
 	font-family: 'Indie Flower', 'Georgia', 'Times New Roman', serif;
 	color: $black;

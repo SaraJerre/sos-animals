@@ -6,7 +6,7 @@ get_header();
       <h1 class="jumbotron-heading"><?php single_cat_title(); ?></h1>
       <p class="lead text-muted">Good Boy drool lazy cat right paw ID tag finch slobbery bed chow nest run fast. Kisses Scooby snacks yawn play dead lick bird seed chew tongue walk cage bird food heel harness fur biscuit?</p>
       <p>
-        <a href="http://sarajerre.se/sos-animals/kontakt/kontaktformular/" class="btn btn-primary">Kontakta oss</a>
+        <a href="http://sarajerre.se/sos-animals/kontakt/kontaktformular/" class="btn btn-success contact">Kontakta oss</a>
       </p>
     </div>
 </section>
@@ -33,7 +33,7 @@ get_header();
                   ?>
                 <p class="card-text"><?php echo get_custom_excerpt(20); ?></p>
                 <div class="read-more-wrapper">
-                  <a href="<?php the_permalink(); ?>" class="btn btn-success"><?php _e('Read more', 'sos-animals') ?></a>
+                  <a href="<?php the_permalink(); ?>" class="btn btn-success dogs"><?php _e('Read more', 'sos-animals') ?></a>
                 </div>
               </div>
             <?php 

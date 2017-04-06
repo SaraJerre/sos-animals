@@ -23,7 +23,7 @@ get_header();
 				<main class="the-excerpt">
 					<?php the_excerpt(50); ?>
 					 <div class="read-more-wrapper">
-                      <a href="<?php the_permalink(); ?>" class="btn btn-success"><?php _e('Read more', 'sos-animals') ?></a>
+                      <a href="<?php the_permalink(); ?>" class="btn btn-success search"><?php _e('Read more', 'sos-animals') ?></a>
                     </div>
  				</main>
  			<?php
