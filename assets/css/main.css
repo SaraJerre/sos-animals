@@ -221,7 +221,7 @@ footer {
   .input-group > .form-control {
     border: 2px solid #a50000; }
 
-.search-results h1 {
+.search-results h1, .search-results img {
   margin-bottom: 1rem; }
 
 .btn-success {
