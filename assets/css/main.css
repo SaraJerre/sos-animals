@@ -221,6 +221,9 @@ footer {
   .input-group > .form-control {
     border: 2px solid #a50000; }
 
+.search-results h1 {
+  margin-bottom: 1rem; }
+
 .btn-success {
   margin-top: 1rem;
   font-family: 'Indie Flower', 'Georgia', 'Times New Roman', serif; }
