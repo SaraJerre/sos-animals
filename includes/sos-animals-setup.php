@@ -1,6 +1,6 @@
 <?php
 // Register Custom Navigation Walker
-require_once('/wp-bootstrap-navwalker.php');
+require_once('wp-bootstrap-navwalker.php');
 
 function setup() {
 
